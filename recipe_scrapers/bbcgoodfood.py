@@ -63,3 +63,13 @@ class BBCGoodFood(AbstractScraper):
             normalize_string(instruction.get_text())
             for instruction in instructions
         ])
+
+    def ratings(self):
+        rating = self.soup.find(
+            'meta',
+            {'itemprop': 'ratingValue'}
+        )['content']
+        try:
+            return round(float(rating), 2)
+        except:
+            return -1.0
