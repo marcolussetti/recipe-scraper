@@ -42,3 +42,10 @@ class ClosetCooking(AbstractScraper):
             normalize_string(instruction.get_text())
             for instruction in instructions
         ])
+
+    def image(self):
+        image = self.soup.find(
+            'img',
+            {'class': 'recipe_photo'}
+        )
+        return image['data-lazy-src'] if image else None
