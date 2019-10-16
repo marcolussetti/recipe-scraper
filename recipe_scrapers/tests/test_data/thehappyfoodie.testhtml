@@ -46,8 +46,8 @@
 
 
   <link rel="shortcut icon" href="https://static.flockler.com/assets/the_happy_foodie/images/favicon-6df97addbdda2c99116e9bf6054c237cb5538f2aec0897e74b15242870dc0264.ico">
-  <link rel="stylesheet" media="screen" href="https://static.flockler.com/assets/the_happy_foodie/stylesheets/application-45415ca94a3b5671b56f354221d136baaf4b603661644159a508bf95493f4dfe.css" />
-  <link rel="stylesheet" media="print" href="https://static.flockler.com/assets/the_happy_foodie/stylesheets/application-print-a4817ae449539e27c1951edabe33b4ac70771dead9048bc86c40d3b09f5d464f.css" />
+  <link rel="stylesheet" media="screen" href="https://static.flockler.com/assets/the_happy_foodie/stylesheets/application-4834269109ad6050d9ea53d8a573964d81b03d4f525b7055c6424eceee1ed95d.css" />
+  <link rel="stylesheet" media="print" href="https://static.flockler.com/assets/the_happy_foodie/stylesheets/application-print-6ac8ebe9b75ba2ed35d909155ebfb4444cce212573aae9a9e8bd778512717ada.css" />
   <!--[if IE 7]><link rel="stylesheet" href="https://static.flockler.com/assets/the_happy_foodie/stylesheets/fonts/the-happy-foodie-icons-ie7-ffff305341a7afc715f085fd084dfd1b729b03e64e24d0b90caa59f9529e50e8.css"><![endif]-->
   <script>
   var _prum = [['id', '5211c8c1abe53dca49000001'],
@@ -441,8 +441,8 @@
             if ( typeof _gaq === 'object' && gaEventSent == false) {
 
               gaEventSent = true;
-              _gaq.push(['t1._set','hitCallback', function() { submitModalNewsletterForm(form); }]);
-              _gaq.push(['t1._trackEvent', 'The Happy Foodie Newsletter banner', 'Submit form']);
+              _gaq.push(['_set','hitCallback', function() { submitModalNewsletterForm(form); }]);
+              _gaq.push(['_trackEvent', 'The Happy Foodie Newsletter banner', 'Submit form']);
 
               if (storageAvailable('sessionStorage')) {
                 window.sessionStorage.setItem('thf_banner_subscribed', true);
@@ -491,6 +491,10 @@
         <input type="submit" class="button" name="submit" id="submit" value="Submit">
       </form>
 
+      <div class="newsletter-bar__terms">
+        By clicking SUBMIT, I consent to you using my details to send me The Happy Foodie newsletters and confirm that I have read and understood Penguin Random House's <a href="https://www.penguinrandomhouse.co.uk/PrivacyPolicy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+      </div>
+
       <div class="newsletter-bar__thanks hidden">Thanks for signing up!</div>
     </div>
   </aside>
@@ -516,41 +520,99 @@
 
   
 
-  <div class="recipe__meta">
-      <figure class="recipe__meta__book-cover">
-        <a href="/books/my-little-french-kitchen">
-          <img src="https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x150.jpg"
-              srcset="https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x150.jpg 1x,
-                      https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x300.jpg 2x"
-                  alt="My Little French Kitchen">
-</a>      </figure>
+  <div class="from-the-book-modal">
+  <div class="from-the-book-modal__card">
+    <button type="button" class="from-the-book-modal__close" onclick="document.body.classList.remove('from-the-book-modal-visible'); return false;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+        <path fill-rule="evenodd" d="M25.6057228,4.39350913 C19.7490864,-1.46450304 10.251214,-1.46450304 4.39337768,4.39350913 C-1.46445923,10.2503213 -1.46445923,19.7484789 4.39337768,25.6064911 C10.250014,31.464503 19.7478865,31.464503 25.6057228,25.6064911 C31.4647591,19.7472789 31.4647591,10.2503213 25.6057228,4.39350913 Z M22.9550721,20.3025706 L20.3044214,22.9544709 L15.0006602,17.6505504 L9.69689894,22.9544709 L7.04624826,20.3025706 L12.3500095,14.9986501 L7.04624826,9.69472965 L9.69689894,7.04282941 L15.0006602,12.3467499 L20.3044214,7.04282941 L22.9550721,9.69472965 L17.6513109,14.9986501 L22.9550721,20.3025706 Z"/>
+      </svg>
+    </button>
+    <div class="from-the-book-modal__card__content">
+      <div class="from-the-book-modal__gallery">
+        <script>
+          (function () {
+            'use strict';
 
-      <div class="recipe__meta__book__details">
-        <strong>From the book</strong>
-        <a href="/books/my-little-french-kitchen">My Little French Kitchen</a>
+            var currentIndex = 0;
+            var img;
+            var caption;
+            var images = [{"caption":"My Little French Kitchen","url":"https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s640x800_contain.jpg"},{"caption":"A whirlwind tour of classic French cooking","url":"https://flockler.com/thumbs/sites/192/little-french-kitchen-1-0852fb23-3e95-4ec6-91ec-c1129493e952_s640x800_q80_noupscale_contain.jpg"},{"caption":"Simple recipes for comforting classics","url":"https://flockler.com/thumbs/sites/192/little-french-kitchen-3-e62a1fbb-1f8d-4f4f-b802-d307901a8c38_s640x800_q80_noupscale_contain.jpg"},{"caption":"Desserts that will delight any sweet tooth","url":"https://flockler.com/thumbs/sites/192/little-french-kitchen-3-07c6377a-a08d-46c3-9fac-f501ee26f0ed_s640x800_q80_noupscale_contain.jpg"}];
+
+            images.forEach(function (image) {
+              var link = document.createElement('link');
+              link.as = 'image';
+              link.rel = 'preload';
+              link.href = image.url;
+              document.head.appendChild(link);
+            });
+
+            window.renderFromTheBookModalPic = function (i) {
+              var buttonLeft = document.querySelector('.from-the-book-modal__gallery__button[data-direction="left"]');
+              var buttonRight = document.querySelector('.from-the-book-modal__gallery__button[data-direction="right"]');
+
+              currentIndex = i;
+
+              if (!img) {
+                img = document.querySelector('.from-the-book-modal__gallery figure img');
+                caption = document.querySelector('.from-the-book-modal__gallery figure figcaption');
+              }
+
+              img.src = images[i].url;
+              caption.innerText = images[i].caption;
+
+              if (currentIndex === images.length - 1) {
+                buttonRight.disabled = true;
+              } else {
+                buttonRight.disabled = false;
+              }
+
+              if (currentIndex === 0) {
+                buttonLeft.disabled = true;
+              } else {
+                buttonLeft.disabled = false;
+              }
+
+              document.body.classList.add('from-the-book-modal-visible');
+            };
+
+            window.navigateFromTheBookModalPic = function (el) {
+              var direction = el.dataset.direction;
+              if (direction === 'left' && currentIndex > 0) {
+                currentIndex--;
+                renderFromTheBookModalPic(currentIndex);
+              } else if (direction === 'right' && currentIndex < images.length - 1) {
+                currentIndex++;
+                renderFromTheBookModalPic(currentIndex);
+              }
+
+              return false;
+            };
+          })();
+        </script>
+
+        <button disabled type="button" onclick="navigateFromTheBookModalPic(this);" class="from-the-book-modal__gallery__button" data-direction="left">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="40" viewBox="0 0 23 40">
+            <polygon fill-rule="evenodd" points="20.144 0 2.856 17.164 2.856 17.162 0 19.998 0 20.002 2.856 22.838 2.856 22.836 20.144 40 23 37.164 5.713 20 23 2.836"/>
+          </svg>
+        </button>
+
+        <figure>
+          <img data-pin-nopin="true"/>
+          <figcaption></figcaption>
+        </figure>
+
+        <button type="button" onclick="navigateFromTheBookModalPic(this);" class="from-the-book-modal__gallery__button" data-direction="right">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23" height="40" viewBox="0 0 23 40">
+            <polygon fill-rule="evenodd" points="20.144 0 2.856 17.164 2.856 17.162 0 19.998 0 20.002 2.856 22.838 2.856 22.836 20.144 40 23 37.164 5.713 20 23 2.836" transform="matrix(-1 0 0 1 23 0)"/>
+          </svg>
+        </button>
       </div>
+    </div>
 
-      <figure class="recipe__meta__author-image">
-          <a href="/chefs/rachel-khoo">
-
-        <img src="https://flockler.com/thumbs/sites/192/rachel-khoo-headshot_s65x65.jpg"
-            srcset="https://flockler.com/thumbs/sites/192/rachel-khoo-headshot_s65x65.jpg 1x,
-                    https://flockler.com/thumbs/sites/192/rachel-khoo-headshot_s130x130.jpg 2x"
-                alt="Rachel Khoo">
-
-        </a>
-      </figure>
-
-      <div class="recipe__meta__authors">
-        <strong>By</strong>
-        <a itemprop="author" href="/chefs/rachel-khoo">Rachel Khoo</a>
-      </div>
-
-      <div class="recipe__meta__book__purchase">
-        <div class="buy-button-wrapper">
+    <div class="buy-button-wrapper">
   <button type="button" class="buy-button"
     onclick="this.parentNode.classList.toggle('buy-button-wrapper--open'); return false;">
-    Buy now
+    Buy the book
     <svg style="margin-left: .25em; position: relative; top: -1px;" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 16 10">
       <path fill="#FFF" fill-rule="evenodd" d="M8.00188201,9.99996888 C7.58378315,9.99936055 7.18568289,9.82614919 6.90695032,9.52288268 L0.430601501,2.65224393 C0.15249293,2.35627436 -0.00124035338,1.96913191 7.53791036e-06,1.56800236 C7.53791036e-06,1.33887216 0.048754544,1.11218465 0.143747924,0.902518145 C0.375603733,0.358577019 0.920573754,0.00304946829 1.52552359,0 L14.4734214,0 C15.0783712,0.00303857733 15.6233413,0.358577019 15.8551971,0.902518145 C16.1245479,1.48960302 16.0120598,2.17576451 15.5683371,2.65222837 L9.09566818,9.52473414 C8.81693561,9.82678709 8.41945931,9.99939322 8.0020004,10 L8.00188201,9.99996888 Z"/>
     </svg>
@@ -562,8 +624,571 @@
   </div>
 </div>
 
-      </div>
   </div>
+</div>
+
+
+<div class="recipe__meta-alt">
+    <div style="margin-bottom: 20px;">
+      <h2>From the book</h2>
+      <a href="/books/my-little-french-kitchen">My Little French Kitchen</a>
+      by <a itemprop="author" href="/chefs/rachel-khoo">Rachel Khoo</a>
+    </div>
+
+  <div class="recipe__meta-alt__from-the-book-container">
+    <script>
+      (function() {
+        'use strict';
+
+        // polyfill
+        function polyfill() {
+          // aliases
+          var w = window;
+          var d = document;
+
+          // return if scroll behavior is supported and polyfill is not forced
+          if (
+            'scrollBehavior' in d.documentElement.style &&
+            w.__forceSmoothScrollPolyfill__ !== true
+          ) {
+            return;
+          }
+
+          // globals
+          var Element = w.HTMLElement || w.Element;
+          var SCROLL_TIME = 468;
+
+          // object gathering original scroll methods
+          var original = {
+            scroll: w.scroll || w.scrollTo,
+            scrollBy: w.scrollBy,
+            elementScroll: Element.prototype.scroll || scrollElement,
+            scrollIntoView: Element.prototype.scrollIntoView
+          };
+
+          // define timing method
+          var now =
+            w.performance && w.performance.now
+              ? w.performance.now.bind(w.performance)
+              : Date.now;
+
+          /**
+           * indicates if a the current browser is made by Microsoft
+           * @method isMicrosoftBrowser
+           * @param {String} userAgent
+           * @returns {Boolean}
+           */
+          function isMicrosoftBrowser(userAgent) {
+            var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+            return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+          }
+
+          /*
+          * IE has rounding bug rounding down clientHeight and clientWidth and
+          * rounding up scrollHeight and scrollWidth causing false positives
+          * on hasScrollableSpace
+          */
+          var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+          /**
+           * changes scroll position inside an element
+           * @method scrollElement
+           * @param {Number} x
+           * @param {Number} y
+           * @returns {undefined}
+           */
+          function scrollElement(x, y) {
+            this.scrollLeft = x;
+            this.scrollTop = y;
+          }
+
+          /**
+           * returns result of applying ease math function to a number
+           * @method ease
+           * @param {Number} k
+           * @returns {Number}
+           */
+          function ease(k) {
+            return 0.5 * (1 - Math.cos(Math.PI * k));
+          }
+
+          /**
+           * indicates if a smooth behavior should be applied
+           * @method shouldBailOut
+           * @param {Number|Object} firstArg
+           * @returns {Boolean}
+           */
+          function shouldBailOut(firstArg) {
+            if (
+              firstArg === null ||
+              typeof firstArg !== 'object' ||
+              firstArg.behavior === undefined ||
+              firstArg.behavior === 'auto' ||
+              firstArg.behavior === 'instant'
+            ) {
+              // first argument is not an object/null
+              // or behavior is auto, instant or undefined
+              return true;
+            }
+
+            if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+              // first argument is an object and behavior is smooth
+              return false;
+            }
+
+            // throw error when behavior is not supported
+            throw new TypeError(
+              'behavior member of ScrollOptions ' +
+                firstArg.behavior +
+                ' is not a valid value for enumeration ScrollBehavior.'
+            );
+          }
+
+          /**
+           * indicates if an element has scrollable space in the provided axis
+           * @method hasScrollableSpace
+           * @param {Node} el
+           * @param {String} axis
+           * @returns {Boolean}
+           */
+          function hasScrollableSpace(el, axis) {
+            if (axis === 'Y') {
+              return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+            }
+
+            if (axis === 'X') {
+              return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+            }
+          }
+
+          /**
+           * indicates if an element has a scrollable overflow property in the axis
+           * @method canOverflow
+           * @param {Node} el
+           * @param {String} axis
+           * @returns {Boolean}
+           */
+          function canOverflow(el, axis) {
+            var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+            return overflowValue === 'auto' || overflowValue === 'scroll';
+          }
+
+          /**
+           * indicates if an element can be scrolled in either axis
+           * @method isScrollable
+           * @param {Node} el
+           * @param {String} axis
+           * @returns {Boolean}
+           */
+          function isScrollable(el) {
+            var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+            var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+            return isScrollableY || isScrollableX;
+          }
+
+          /**
+           * finds scrollable parent of an element
+           * @method findScrollableParent
+           * @param {Node} el
+           * @returns {Node} el
+           */
+          function findScrollableParent(el) {
+            var isBody;
+
+            do {
+              el = el.parentNode;
+
+              isBody = el === d.body;
+            } while (isBody === false && isScrollable(el) === false);
+
+            isBody = null;
+
+            return el;
+          }
+
+          /**
+           * self invoked function that, given a context, steps through scrolling
+           * @method step
+           * @param {Object} context
+           * @returns {undefined}
+           */
+          function step(context) {
+            var time = now();
+            var value;
+            var currentX;
+            var currentY;
+            var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+            // avoid elapsed times higher than one
+            elapsed = elapsed > 1 ? 1 : elapsed;
+
+            // apply easing to elapsed time
+            value = ease(elapsed);
+
+            currentX = context.startX + (context.x - context.startX) * value;
+            currentY = context.startY + (context.y - context.startY) * value;
+
+            context.method.call(context.scrollable, currentX, currentY);
+
+            // scroll more if we have not reached our destination
+            if (currentX !== context.x || currentY !== context.y) {
+              w.requestAnimationFrame(step.bind(w, context));
+            }
+          }
+
+          /**
+           * scrolls window or element with a smooth behavior
+           * @method smoothScroll
+           * @param {Object|Node} el
+           * @param {Number} x
+           * @param {Number} y
+           * @returns {undefined}
+           */
+          function smoothScroll(el, x, y) {
+            var scrollable;
+            var startX;
+            var startY;
+            var method;
+            var startTime = now();
+
+            // define scroll context
+            if (el === d.body) {
+              scrollable = w;
+              startX = w.scrollX || w.pageXOffset;
+              startY = w.scrollY || w.pageYOffset;
+              method = original.scroll;
+            } else {
+              scrollable = el;
+              startX = el.scrollLeft;
+              startY = el.scrollTop;
+              method = scrollElement;
+            }
+
+            // scroll looping over a frame
+            step({
+              scrollable: scrollable,
+              method: method,
+              startTime: startTime,
+              startX: startX,
+              startY: startY,
+              x: x,
+              y: y
+            });
+          }
+
+          // ORIGINAL METHODS OVERRIDES
+          // w.scroll and w.scrollTo
+          w.scroll = w.scrollTo = function() {
+            // avoid action when no arguments are passed
+            if (arguments[0] === undefined) {
+              return;
+            }
+
+            // avoid smooth behavior if not required
+            if (shouldBailOut(arguments[0]) === true) {
+              original.scroll.call(
+                w,
+                arguments[0].left !== undefined
+                  ? arguments[0].left
+                  : typeof arguments[0] !== 'object'
+                    ? arguments[0]
+                    : w.scrollX || w.pageXOffset,
+                // use top prop, second argument if present or fallback to scrollY
+                arguments[0].top !== undefined
+                  ? arguments[0].top
+                  : arguments[1] !== undefined
+                    ? arguments[1]
+                    : w.scrollY || w.pageYOffset
+              );
+
+              return;
+            }
+
+            // LET THE SMOOTHNESS BEGIN!
+            smoothScroll.call(
+              w,
+              d.body,
+              arguments[0].left !== undefined
+                ? ~~arguments[0].left
+                : w.scrollX || w.pageXOffset,
+              arguments[0].top !== undefined
+                ? ~~arguments[0].top
+                : w.scrollY || w.pageYOffset
+            );
+          };
+
+          // w.scrollBy
+          w.scrollBy = function() {
+            // avoid action when no arguments are passed
+            if (arguments[0] === undefined) {
+              return;
+            }
+
+            // avoid smooth behavior if not required
+            if (shouldBailOut(arguments[0])) {
+              original.scrollBy.call(
+                w,
+                arguments[0].left !== undefined
+                  ? arguments[0].left
+                  : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+                arguments[0].top !== undefined
+                  ? arguments[0].top
+                  : arguments[1] !== undefined ? arguments[1] : 0
+              );
+
+              return;
+            }
+
+            // LET THE SMOOTHNESS BEGIN!
+            smoothScroll.call(
+              w,
+              d.body,
+              ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+              ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+            );
+          };
+
+          // Element.prototype.scroll and Element.prototype.scrollTo
+          Element.prototype.scroll = Element.prototype.scrollTo = function() {
+            // avoid action when no arguments are passed
+            if (arguments[0] === undefined) {
+              return;
+            }
+
+            // avoid smooth behavior if not required
+            if (shouldBailOut(arguments[0]) === true) {
+              // if one number is passed, throw error to match Firefox implementation
+              if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+                throw new SyntaxError('Value could not be converted');
+              }
+
+              original.elementScroll.call(
+                this,
+                // use left prop, first number argument or fallback to scrollLeft
+                arguments[0].left !== undefined
+                  ? ~~arguments[0].left
+                  : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+                // use top prop, second argument or fallback to scrollTop
+                arguments[0].top !== undefined
+                  ? ~~arguments[0].top
+                  : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+              );
+
+              return;
+            }
+
+            var left = arguments[0].left;
+            var top = arguments[0].top;
+
+            // LET THE SMOOTHNESS BEGIN!
+            smoothScroll.call(
+              this,
+              this,
+              typeof left === 'undefined' ? this.scrollLeft : ~~left,
+              typeof top === 'undefined' ? this.scrollTop : ~~top
+            );
+          };
+
+          // Element.prototype.scrollBy
+          Element.prototype.scrollBy = function() {
+            // avoid action when no arguments are passed
+            if (arguments[0] === undefined) {
+              return;
+            }
+
+            // avoid smooth behavior if not required
+            if (shouldBailOut(arguments[0]) === true) {
+              original.elementScroll.call(
+                this,
+                arguments[0].left !== undefined
+                  ? ~~arguments[0].left + this.scrollLeft
+                  : ~~arguments[0] + this.scrollLeft,
+                arguments[0].top !== undefined
+                  ? ~~arguments[0].top + this.scrollTop
+                  : ~~arguments[1] + this.scrollTop
+              );
+
+              return;
+            }
+
+            this.scroll({
+              left: ~~arguments[0].left + this.scrollLeft,
+              top: ~~arguments[0].top + this.scrollTop,
+              behavior: arguments[0].behavior
+            });
+          };
+
+          // Element.prototype.scrollIntoView
+          Element.prototype.scrollIntoView = function() {
+            // avoid smooth behavior if not required
+            if (shouldBailOut(arguments[0]) === true) {
+              original.scrollIntoView.call(
+                this,
+                arguments[0] === undefined ? true : arguments[0]
+              );
+
+              return;
+            }
+
+            // LET THE SMOOTHNESS BEGIN!
+            var scrollableParent = findScrollableParent(this);
+            var parentRects = scrollableParent.getBoundingClientRect();
+            var clientRects = this.getBoundingClientRect();
+
+            if (scrollableParent !== d.body) {
+              // reveal element inside parent
+              smoothScroll.call(
+                this,
+                scrollableParent,
+                scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+                scrollableParent.scrollTop + clientRects.top - parentRects.top
+              );
+
+              // reveal parent in viewport unless is fixed
+              if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+                w.scrollBy({
+                  left: parentRects.left,
+                  top: parentRects.top,
+                  behavior: 'smooth'
+                });
+              }
+            } else {
+              // reveal element in viewport
+              w.scrollBy({
+                left: clientRects.left,
+                top: clientRects.top,
+                behavior: 'smooth'
+              });
+            }
+          };
+        }
+
+        if (typeof exports === 'object' && typeof module !== 'undefined') {
+          // commonjs
+          module.exports = { polyfill: polyfill };
+        } else {
+          // global
+          polyfill();
+        }
+      })();
+
+      (function(){
+        'use strict';
+
+        var initialized = false;
+        var buttonLeft, buttonRight, container, pageCount;
+
+        var scrollLeft = function () {
+          var newPos = container.scrollLeft - document.querySelector('.recipe__meta-alt__from-the-book__page').scrollWidth;
+          container.scrollTo({ top: 0, left: newPos, behavior: 'smooth' });
+          buttonRight.disabled = false;
+
+          if (container.scrollLeft === 0) {
+            buttonLeft.disabled = true;
+          }
+        };
+
+        var scrollRight = function () {
+          var newPos = container.scrollLeft + document.querySelector('.recipe__meta-alt__from-the-book__page').scrollWidth;
+          container.scrollTo({ top: 0, left: newPos, behavior: 'smooth' });
+          buttonLeft.disabled = false;
+
+          if (container.scrollLeft === container.scrollWidth - container.clientWidth) {
+            buttonRight.disabled = true;
+          }
+        };
+
+        var checkScroll = function () {
+          if (!initialized) {
+            initialized = true;
+            buttonLeft = document.querySelector('.recipe__meta-alt__from-the-book-button--left');
+            buttonRight = document.querySelector('.recipe__meta-alt__from-the-book-button--right');
+            container = document.querySelector('.recipe__meta-alt__from-the-book');
+            pageCount = document.querySelectorAll('.recipe__meta-alt__from-the-book__page').length;
+          }
+
+          if (container.scrollWidth > container.clientWidth) {
+            buttonLeft.classList.remove('hidden');
+            buttonRight.classList.remove('hidden');
+          } else {
+            buttonLeft.classList.add('hidden');
+            buttonRight.classList.add('hidden');
+          }
+
+          buttonLeft.onclick = scrollLeft;
+          buttonRight.onclick = scrollRight;
+        }
+
+        window.checkSITBScroll = checkScroll;
+      })();
+    </script>
+    <button class="recipe__meta-alt__from-the-book-button recipe__meta-alt__from-the-book-button--left" disabled>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#e15d3b" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm3.223,8.255a.5.5,0,0,1-.193.395L10.977,11.8a.249.249,0,0,0,0,.394L15.03,15.35a.5.5,0,0,1,.193.395v2.687a.5.5,0,0,1-.82.385L6.684,12.384a.5.5,0,0,1,0-.768L14.4,5.183a.5.5,0,0,1,.82.385Z"></path></svg>
+    </button>
+    <button class="recipe__meta-alt__from-the-book-button recipe__meta-alt__from-the-book-button--right">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#e15d3b" d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm5.316,12.384L9.6,18.817a.5.5,0,0,1-.82-.385V15.745a.5.5,0,0,1,.193-.395L13.023,12.2a.249.249,0,0,0,0-.394L8.97,8.65a.5.5,0,0,1-.193-.395V5.568a.5.5,0,0,1,.82-.385l7.719,6.433A.5.5,0,0,1,17.316,12.384Z"></path></svg>
+    </button>
+    <div class="recipe__meta-alt__from-the-book-wrapper">
+      <div class="recipe__meta-alt__from-the-book">
+          <figure class="recipe__meta-alt__from-the-book__page" onclick="renderFromTheBookModalPic(0);">
+            <img src="https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x240.jpg"
+              srcset="https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x240.jpg 1x,
+                      https://flockler.com/thumbs/sites/192/9780718177478_My_Little_French_Kitchen_Jacket_s0x480.jpg 2x"
+                  alt="" data-pin-nopin="true" onload="window.checkSITBScroll();">
+            <figcaption>
+              My Little French Kitchen
+            </figcaption>
+          </figure>
+          <figure class="recipe__meta-alt__from-the-book__page" onclick="renderFromTheBookModalPic(1);">
+            <img src="https://flockler.com/thumbs/sites/192/little-french-kitchen-1-0852fb23-3e95-4ec6-91ec-c1129493e952_s0x240_q80_noupscale.jpg"
+              srcset="https://flockler.com/thumbs/sites/192/little-french-kitchen-1-0852fb23-3e95-4ec6-91ec-c1129493e952_s0x240_q80_noupscale.jpg 1x,
+                      https://flockler.com/thumbs/sites/192/little-french-kitchen-1-0852fb23-3e95-4ec6-91ec-c1129493e952_s0x480_q80_noupscale.jpg 2x"
+                  alt="" data-pin-nopin="true" onload="window.checkSITBScroll();">
+            <figcaption>
+              A whirlwind tour of classic French cooking
+            </figcaption>
+          </figure>
+          <figure class="recipe__meta-alt__from-the-book__page" onclick="renderFromTheBookModalPic(2);">
+            <img src="https://flockler.com/thumbs/sites/192/little-french-kitchen-3-e62a1fbb-1f8d-4f4f-b802-d307901a8c38_s0x240_q80_noupscale.jpg"
+              srcset="https://flockler.com/thumbs/sites/192/little-french-kitchen-3-e62a1fbb-1f8d-4f4f-b802-d307901a8c38_s0x240_q80_noupscale.jpg 1x,
+                      https://flockler.com/thumbs/sites/192/little-french-kitchen-3-e62a1fbb-1f8d-4f4f-b802-d307901a8c38_s0x480_q80_noupscale.jpg 2x"
+                  alt="" data-pin-nopin="true" onload="window.checkSITBScroll();">
+            <figcaption>
+              Simple recipes for comforting classics
+            </figcaption>
+          </figure>
+          <figure class="recipe__meta-alt__from-the-book__page" onclick="renderFromTheBookModalPic(3);">
+            <img src="https://flockler.com/thumbs/sites/192/little-french-kitchen-3-07c6377a-a08d-46c3-9fac-f501ee26f0ed_s0x240_q80_noupscale.jpg"
+              srcset="https://flockler.com/thumbs/sites/192/little-french-kitchen-3-07c6377a-a08d-46c3-9fac-f501ee26f0ed_s0x240_q80_noupscale.jpg 1x,
+                      https://flockler.com/thumbs/sites/192/little-french-kitchen-3-07c6377a-a08d-46c3-9fac-f501ee26f0ed_s0x480_q80_noupscale.jpg 2x"
+                  alt="" data-pin-nopin="true" onload="window.checkSITBScroll();">
+            <figcaption>
+              Desserts that will delight any sweet tooth
+            </figcaption>
+          </figure>
+      </div>
+    </div>
+  </div>
+  <div class="buy-button-wrapper">
+  <button type="button" class="buy-button"
+    onclick="this.parentNode.classList.toggle('buy-button-wrapper--open'); return false;">
+    Buy the book
+    <svg style="margin-left: .25em; position: relative; top: -1px;" xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 16 10">
+      <path fill="#FFF" fill-rule="evenodd" d="M8.00188201,9.99996888 C7.58378315,9.99936055 7.18568289,9.82614919 6.90695032,9.52288268 L0.430601501,2.65224393 C0.15249293,2.35627436 -0.00124035338,1.96913191 7.53791036e-06,1.56800236 C7.53791036e-06,1.33887216 0.048754544,1.11218465 0.143747924,0.902518145 C0.375603733,0.358577019 0.920573754,0.00304946829 1.52552359,0 L14.4734214,0 C15.0783712,0.00303857733 15.6233413,0.358577019 15.8551971,0.902518145 C16.1245479,1.48960302 16.0120598,2.17576451 15.5683371,2.65222837 L9.09566818,9.52473414 C8.81693561,9.82678709 8.41945931,9.99939322 8.0020004,10 L8.00188201,9.99996888 Z"/>
+    </svg>
+  </button>
+  <div class="buy-button__links">
+      <a href="http://www.amazon.co.uk/My-Little-French-Kitchen-mountains/dp/0718177479/?tag=prh10143-21" class="js-buy-book-amazon" target="_blank" rel="noopener noreferrer">Amazon</a>
+      <a href="https://www.waterstones.com/book/the-little-paris-kitchen/rachel-khoo/9780718158118" class="js-buy-book-waterstones" target="_blank" rel="noopener noreferrer">Waterstones</a>
+      <a href="http://www.hive.co.uk/book/my-little-french-kitchen-over-100-recipes-from-the-mountains-market-squares-and-shores-of-france/16490938/" class="js-buy-book-hive" target="_blank" rel="noopener noreferrer">Hive</a>
+  </div>
+</div>
+
+</div>
+
 
 
     <div class="recipe__mobile-clipper recipe__mobile-clipper--summary">
@@ -584,7 +1209,9 @@
             <path d="M39.6804,21.1955 L41.0978824,21.1955 L41.0978824,21.8955 C41.0928235,21.9395 41.0928235,21.9835 41.0978824,22.0275 L41.0978824,29.5995 L39.6804,29.5995 L39.6804,21.1955 Z M21.2576824,11.391 C24.3966824,11.391 26.9260941,13.891 26.9260941,16.993 C26.9260941,20.096 24.3966824,22.596 21.2576824,22.596 C18.1181765,22.596 15.5887647,20.096 15.5887647,16.993 C15.5887647,13.891 18.1181765,11.391 21.2576824,11.391 Z M21.2576824,9.99 C17.3527765,9.99 14.1717882,13.134 14.1717882,16.993 C14.1717882,20.853 17.3527765,23.997 21.2576824,23.997 C25.1625882,23.997 28.3425647,20.853 28.3425647,16.993 C28.3425647,13.134 25.1625882,9.99 21.2576824,9.99 Z M26.3944118,7.1885 C26.0109529,7.265 25.7625647,7.6345 25.8394588,8.0135 C25.8824588,8.225 26.0215765,8.4055 26.2173529,8.502 C28.4958471,9.802 30.1419882,11.943 30.8234118,14.455 C30.9316706,14.83 31.3267647,15.048 31.7066824,14.9405 C32.0860941,14.834 32.3061529,14.4435 32.1978941,14.068 C32.1973882,14.0655 32.1968824,14.063 32.1958706,14.061 C31.4173176,11.1905 29.5298706,8.762 26.9260941,7.2765 C26.7672471,7.179 26.5760235,7.1475 26.3944118,7.1885 Z M21.2576824,5.0875 C27.9181294,5.0875 33.3032471,10.4095 33.3032471,16.993 C33.3032471,23.577 27.9181294,28.8995 21.2576824,28.8995 C14.5962235,28.8995 9.21161176,23.577 9.21161176,16.993 C9.21161176,10.4095 14.5962235,5.0875 21.2576824,5.0875 Z M21.2576824,3.687 C13.8303176,3.687 7.79412941,9.653 7.79412941,16.993 C7.79412941,24.334 13.8303176,30.3 21.2576824,30.3 C28.6840353,30.3 34.7202235,24.334 34.7202235,16.993 C34.7202235,9.653 28.6840353,3.687 21.2576824,3.687 Z M41.0978824,1.7175 L41.0978824,19.795 L38.2634235,19.795 L38.2634235,5.263 C38.2634235,3.601 39.4345412,2.217 41.0978824,1.7175 Z M2.83445882,9.99 L4.25194118,9.99 L4.25194118,1.586 L2.83445882,1.586 L2.83445882,9.99 Z M0,1.586 L0,10.6905 C0.00758823529,10.8735 0.0865058824,11.046 0.221576471,11.172 L1.41748235,12.354 L1.41748235,30.3 C1.41748235,30.6865 1.73467059,31 2.12521176,31 L4.96017647,31 C5.35122353,31 5.66841176,30.6865 5.66891765,30.3 L5.66891765,12.354 L6.86381176,11.172 C6.99888235,11.046 7.07830588,10.8735 7.08589412,10.6905 L7.08589412,1.586 L5.66891765,1.586 L5.66891765,10.384 L4.47301176,11.566 C4.32681176,11.702 4.24688235,11.893 4.25143529,12.0915 L4.25143529,29.5995 L2.83445882,29.5995 L2.83445882,12.0915 C2.83901176,11.893 2.75807059,11.702 2.61288235,11.566 L1.41748235,10.384 L1.41748235,1.586 L0,1.586 Z M42.4258235,0.098 C42.1364588,0.098 41.8632824,0.146 41.5850471,0.1855 C41.5698706,0.185 41.5552,0.185 41.5405294,0.1855 C38.9018471,0.5795 36.8459412,2.662 36.8459412,5.263 L36.8459412,21.1955 L38.2634235,21.1955 L38.2634235,30.3 C38.2634235,30.6865 38.5806118,31 38.9716588,31 L41.8061176,31 C42.1976706,31 42.5148588,30.6865 42.5148588,30.3 L42.5148588,21.9395 L42.5148588,21.8955 L42.5148588,20.495 C42.5189059,20.4515 42.5189059,20.407 42.5148588,20.364 L42.5148588,0.8855 C42.5254824,0.7485 42.4941176,0.6115 42.4258235,0.4915 L42.4258235,0.098 L42.4258235,0.098 Z" stroke="none" fill="currentColor" fill-rule="evenodd"></path>
           </svg>
         </span>
-        Serves 4-6
+        <span itemprop="recipeYield">
+          Serves 4-6
+        </span>
       </div>
 
 
@@ -654,43 +1281,43 @@
   <div class="recipe__ingredients">
   <h2 class="has-border">Ingredients</h2>
   <table class="recipe__ingredients-table">
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">150ml </td>
         <td class="recipe__ingredients__name"> red wine</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">100g </td>
         <td class="recipe__ingredients__name"> tomato paste</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">3 </td>
         <td class="recipe__ingredients__name"> sprigs of thyme, leaves picked</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">3 </td>
         <td class="recipe__ingredients__name"> sprigs of marjoram, leaves picked, or ½ teaspoon dried</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">100ml </td>
         <td class="recipe__ingredients__name"> red wine vinegar</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">1 </td>
         <td class="recipe__ingredients__name"> whole chicken cut into 8 pieces (approx. 1.5kg)</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount"> </td>
         <td class="recipe__ingredients__name"> Salt and ground black pepper</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">500g </td>
         <td class="recipe__ingredients__name"> baby potatoes, washed</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">3 </td>
         <td class="recipe__ingredients__name"> onions, peeled and cut into quarters</td>
       </tr>
-      <tr itemprop="ingredients">
+      <tr itemprop="recipeIngredient">
         <td class="recipe__ingredients__amount">6 </td>
         <td class="recipe__ingredients__name"> carrots, peeled and cut into quarters lengthways</td>
       </tr>
@@ -703,7 +1330,8 @@
   <div class="recipe__mobile-clipper recipe__mobile-clipper--instructions">
     <div class="recipe__instructions">
       <h2 class="has-border">Instructions</h2>
-      <p>Mix together the red wine, tomato paste, herbs and red wine vinegar. Season the chicken pieces with plenty of salt and pepper then place in a bag with the marinade. Shake the bag to make sure each piece is well coated. Place in the fridge for at least 30 minutes.</p>
+      <div itemprop="recipeInstructions">
+        <p>Mix together the red wine, tomato paste, herbs and red wine vinegar. Season the chicken pieces with plenty of salt and pepper then place in a bag with the marinade. Shake the bag to make sure each piece is well coated. Place in the fridge for at least 30 minutes.</p>
 
 <p>In the meantime, place the potatoes in a pan of cold water, put the lid on top and bring up to the boil. Boil for 1–2 minutes, then drain in a colander. Place the onions, carrots and potatoes in a large baking dish or tray (big enough to fit the chicken and the vegetables) and pour over 125ml of water. Preheat the oven to 200°C. Remove the chicken from the fridge and arrange the pieces, skin side up, in a layer on top of the vegetables in the dish. Pour the rest of the marinade over the chicken. Cover with a sheet of baking paper or foil and roast in the preheated oven for 30 minutes. Remove the baking paper or foil and baste the chicken with the cooking liquid. Roast, uncovered, for another 15 minutes or until the skin is crisp. Serve immediately.</p>
 
@@ -712,6 +1340,7 @@
 <p>Faire en avance – get ahead: The veg and chicken can be prepared up to a day in advance, then simply pop it all in the baking tray and cook as indicated in the recipe.</p>
 
 <p>Marinating time: 30 minutes – overnight</p>
+      </div>
     </div>
     <button type="button">
       See full instructions
@@ -753,18 +1382,18 @@
     <h2 class="has-border">More Recipes by Rachel Khoo</h2>
   <div class="has-floated-elements">
         
-<article class="recipe-feature" data-id="82" >
-  <a class="feature-link recipe-feature-link" href="/recipes/asperges-blanches-habillees-white-asparagus-in-blankets">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Asperges blanches habillées (White asparagus in blankets)">
-          <span data-src="https://flockler.com/thumbs/sites/192/9780718177478_white_aspargus_in_blankets_s300x0_c3774x2205_l0x1213_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/9780718177478_white_aspargus_in_blankets_s600x0_c3774x2205_l0x1213_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="1637" >
+  <a class="feature-link recipe-feature-link" href="/recipes/tian-provencal-provencal-vegetable-bake">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="Tian Provençal (Provençal Vegetable Bake)">
+          <span data-src="https://flockler.com/thumbs/sites/192/my_little_french_kitchen_1_167_img_s300x0_c2040x1192_l0x704_q60_noupscale.jpg"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/my_little_french_kitchen_1_167_img_s600x0_c2040x1192_l0x704_q40_noupscale.jpg"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/9780718177478_white_aspargus_in_blankets_s440x0_c3774x2205_l0x1213_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/my_little_french_kitchen_1_167_img_s440x0_c2040x1192_l0x704_q60_noupscale.jpg"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/9780718177478_white_aspargus_in_blankets_s880x0_c3774x2205_l0x1213_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/my_little_french_kitchen_1_167_img_s880x0_c2040x1192_l0x704_q40_noupscale.jpg"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/9780718177478_white_aspargus_in_blankets_s300x0_c3774x2205_l0x1213_q60_noupscale.jpg" alt="Asperges blanches habillées (White asparagus in blankets)">
+            <img src="https://flockler.com/thumbs/sites/192/my_little_french_kitchen_1_167_img_s300x0_c2040x1192_l0x704_q60_noupscale.jpg" alt="Tian Provençal (Provençal Vegetable Bake)">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -772,25 +1401,25 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Asperges blanches habillées (White asparagus in&nbsp;blankets)</h1>
+      <h1 class="recipe-feature-recipe-name">Tian Provençal (Provençal Vegetable&nbsp;Bake)</h1>
         <span class="recipe-feature-chef-name">&mdash; Rachel Khoo &mdash;</span>
     </div>
 </a></article>
 
         
         
-<article class="recipe-feature" data-id="1562" >
-  <a class="feature-link recipe-feature-link" href="/recipes/gratin-au-poisson-fume-smoky-fish-bake">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Gratin Au Poisson Fumé (Smoky Fish Bake)">
-          <span data-src="https://flockler.com/thumbs/sites/192/little_paris_kitchen_2_51_img_s300x0_c2267x1324_l0x546_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/little_paris_kitchen_2_51_img_s600x0_c2267x1324_l0x546_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="317" >
+  <a class="feature-link recipe-feature-link" href="/recipes/winter-salad-with-a-goats-cheese-mousse">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="Winter Salad with a Goat&#39;s Cheese Mousse">
+          <span data-src="https://flockler.com/thumbs/sites/192/salad_s300x0_c702x409_l0x342_q60_noupscale.png"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/salad_s600x0_c702x409_l0x342_q40_noupscale.png"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/little_paris_kitchen_2_51_img_s440x0_c2267x1324_l0x546_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/salad_s440x0_c702x409_l0x342_q60_noupscale.png"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/little_paris_kitchen_2_51_img_s880x0_c2267x1324_l0x546_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/salad_s880x0_c702x409_l0x342_q40_noupscale.png"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/little_paris_kitchen_2_51_img_s300x0_c2267x1324_l0x546_q60_noupscale.jpg" alt="Gratin Au Poisson Fumé (Smoky Fish Bake)">
+            <img src="https://flockler.com/thumbs/sites/192/salad_s300x0_c702x409_l0x342_q60_noupscale.png" alt="Winter Salad with a Goat&#39;s Cheese Mousse">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -798,7 +1427,7 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Gratin Au Poisson Fumé (Smoky Fish&nbsp;Bake)</h1>
+      <h1 class="recipe-feature-recipe-name">Winter Salad with a Goat's Cheese&nbsp;Mousse</h1>
         <span class="recipe-feature-chef-name">&mdash; Rachel Khoo &mdash;</span>
     </div>
 </a></article>
@@ -818,18 +1447,18 @@
     <h2 class="has-border">More Chicken Recipes</h2>
   <div class="has-floated-elements">
         
-<article class="recipe-feature" data-id="68" >
-  <a class="feature-link recipe-feature-link" href="/recipes/hot-chicken-salad-with-sweetmustard-dressing">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Hot Chicken Salad with Sweet Mustard Dressing">
-          <span data-src="https://flockler.com/thumbs/sites/192/hotchicken_s300x0_c2330x1362_l0x1156_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/hotchicken_s600x0_c2330x1362_l0x1156_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="1437" >
+  <a class="feature-link recipe-feature-link" href="/recipes/bang-bang-chicken">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="Bang-Bang Chicken">
+          <span data-src="https://flockler.com/thumbs/sites/192/exploring_china_7_221_img_s300x0_c2208x1289_l0x969_q60_noupscale.jpg"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/exploring_china_7_221_img_s600x0_c2208x1289_l0x969_q40_noupscale.jpg"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/hotchicken_s440x0_c2330x1362_l0x1156_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/exploring_china_7_221_img_s440x0_c2208x1289_l0x969_q60_noupscale.jpg"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/hotchicken_s880x0_c2330x1362_l0x1156_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/exploring_china_7_221_img_s880x0_c2208x1289_l0x969_q40_noupscale.jpg"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/hotchicken_s300x0_c2330x1362_l0x1156_q60_noupscale.jpg" alt="Hot Chicken Salad with Sweet Mustard Dressing">
+            <img src="https://flockler.com/thumbs/sites/192/exploring_china_7_221_img_s300x0_c2208x1289_l0x969_q60_noupscale.jpg" alt="Bang-Bang Chicken">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -837,25 +1466,25 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Hot Chicken Salad with Sweet Mustard&nbsp;Dressing</h1>
-        <span class="recipe-feature-chef-name">&mdash; Simon Hopkinson &mdash;</span>
+      <h1 class="recipe-feature-recipe-name">Bang-Bang&nbsp;Chicken</h1>
+        <span class="recipe-feature-chef-name">&mdash; Ken Hom and Ching-He Huang &mdash;</span>
     </div>
 </a></article>
 
         
         
-<article class="recipe-feature" data-id="2465" >
-  <a class="feature-link recipe-feature-link" href="/recipes/crispy-chicken-with-sweet-potato-fries-and-barbecue-beans">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Crispy Chicken with Sweet Potato Fries and Barbecue Beans">
-          <span data-src="https://flockler.com/thumbs/sites/192/chicken--78f8m53054_s300x0_c1000x584_l0x468_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/chicken--78f8m53054_s600x0_c1000x584_l0x468_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="2275" >
+  <a class="feature-link recipe-feature-link" href="/recipes/chicken-stuffed-with-olives-and-tomatoes">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="">
+          <span data-src="https://flockler.com/thumbs/sites/192/river-cafe-classic-italian-4_s300x0_c2009x1172_l0x421_q60_noupscale.jpg"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/river-cafe-classic-italian-4_s600x0_c2009x1172_l0x421_q40_noupscale.jpg"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/chicken--78f8m53054_s440x0_c1000x584_l0x468_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/river-cafe-classic-italian-4_s440x0_c2009x1172_l0x421_q60_noupscale.jpg"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/chicken--78f8m53054_s880x0_c1000x584_l0x468_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/river-cafe-classic-italian-4_s880x0_c2009x1172_l0x421_q40_noupscale.jpg"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/chicken--78f8m53054_s300x0_c1000x584_l0x468_q60_noupscale.jpg" alt="Crispy Chicken with Sweet Potato Fries and Barbecue Beans">
+            <img src="https://flockler.com/thumbs/sites/192/river-cafe-classic-italian-4_s300x0_c2009x1172_l0x421_q60_noupscale.jpg" alt="">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -863,8 +1492,8 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Crispy Chicken with Sweet Potato Fries and Barbecue&nbsp;Beans</h1>
-        <span class="recipe-feature-chef-name">&mdash; Nadiya Hussain &mdash;</span>
+      <h1 class="recipe-feature-recipe-name">Chicken Stuffed with Olives and&nbsp;Tomatoes</h1>
+        <span class="recipe-feature-chef-name">&mdash; Rose Gray and Ruth Rogers &mdash;</span>
     </div>
 </a></article>
 
@@ -883,18 +1512,18 @@
     <h2 class="has-border">More Roast Recipes</h2>
   <div class="has-floated-elements">
         
-<article class="recipe-feature" data-id="12" >
-  <a class="feature-link recipe-feature-link" href="/recipes/roast-fillet-of-beef-with-herbed-horseradish-sauce">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Roast Fillet of Beef with Herbed Horseradish Sauce">
-          <span data-src="https://flockler.com/thumbs/sites/192/beef_roast_fillet_mary_berry_s300x0_c2195x1282_l0x946_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/beef_roast_fillet_mary_berry_s600x0_c2195x1282_l0x946_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="1983" >
+  <a class="feature-link recipe-feature-link" href="/recipes/fish-pie">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="Rick Stein&#39;s Fish Pie">
+          <span data-src="https://flockler.com/thumbs/sites/192/fish-pie--5d8fv6r35h_s300x0_c1569x917_l0x575_q60_noupscale.jpg"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/fish-pie--5d8fv6r35h_s600x0_c1569x917_l0x575_q40_noupscale.jpg"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/beef_roast_fillet_mary_berry_s440x0_c2195x1282_l0x946_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/fish-pie--5d8fv6r35h_s440x0_c1569x917_l0x575_q60_noupscale.jpg"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/beef_roast_fillet_mary_berry_s880x0_c2195x1282_l0x946_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/fish-pie--5d8fv6r35h_s880x0_c1569x917_l0x575_q40_noupscale.jpg"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/beef_roast_fillet_mary_berry_s300x0_c2195x1282_l0x946_q60_noupscale.jpg" alt="Roast Fillet of Beef with Herbed Horseradish Sauce">
+            <img src="https://flockler.com/thumbs/sites/192/fish-pie--5d8fv6r35h_s300x0_c1569x917_l0x575_q60_noupscale.jpg" alt="Rick Stein&#39;s Fish Pie">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -902,25 +1531,25 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Roast Fillet of Beef with Herbed Horseradish&nbsp;Sauce</h1>
-        <span class="recipe-feature-chef-name">&mdash; Mary Berry &mdash;</span>
+      <h1 class="recipe-feature-recipe-name">Rick Stein's Fish&nbsp;Pie</h1>
+        <span class="recipe-feature-chef-name">&mdash; Rick Stein &mdash;</span>
     </div>
 </a></article>
 
         
         
-<article class="recipe-feature" data-id="2074" >
-  <a class="feature-link recipe-feature-link" href="/recipes/butternut-squash-gratin-with-penne">    <figure class="recipe-feature-cover">
-        <span data-picture data-alt="Butternut Squash Gratin with Penne">
-          <span data-src="https://flockler.com/thumbs/sites/192/mkt_100_family_meals_5_122_img_s300x0_c1559x911_l0x575_q60_noupscale.jpg"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/mkt_100_family_meals_5_122_img_s600x0_c1559x911_l0x575_q40_noupscale.jpg"
+<article class="recipe-feature" data-id="1615" >
+  <a class="feature-link recipe-feature-link" href="/recipes/roast-chicken-with-sumac-onions-and-pine-nuts">    <figure class="recipe-feature-cover">
+        <span data-picture data-alt="Roast Chicken with Sumac, Onions and Pine Nuts">
+          <span data-src="https://flockler.com/thumbs/sites/192/moro_east_7_254_img_s300x0_c2268x1326_l0x632_q60_noupscale.jpg"></span>
+          <span data-src="https://flockler.com/thumbs/sites/192/moro_east_7_254_img_s600x0_c2268x1326_l0x632_q40_noupscale.jpg"
                 data-media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution:192dpi), (min-resolution:2dppx)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/mkt_100_family_meals_5_122_img_s440x0_c1559x911_l0x575_q60_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/moro_east_7_254_img_s440x0_c2268x1326_l0x632_q60_noupscale.jpg"
                 data-media="(min-width:1640px)"></span>
-          <span data-src="https://flockler.com/thumbs/sites/192/mkt_100_family_meals_5_122_img_s880x0_c1559x911_l0x575_q40_noupscale.jpg"
+          <span data-src="https://flockler.com/thumbs/sites/192/moro_east_7_254_img_s880x0_c2268x1326_l0x632_q40_noupscale.jpg"
                 data-media="(min-width:1640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width:1640px) and (min-resolution:192dpi), (min-width:1640px) and (min-resolution:2dppx)"></span>
           <noscript>
-            <img src="https://flockler.com/thumbs/sites/192/mkt_100_family_meals_5_122_img_s300x0_c1559x911_l0x575_q60_noupscale.jpg" alt="Butternut Squash Gratin with Penne">
+            <img src="https://flockler.com/thumbs/sites/192/moro_east_7_254_img_s300x0_c2268x1326_l0x632_q60_noupscale.jpg" alt="Roast Chicken with Sumac, Onions and Pine Nuts">
           </noscript>
         </span>
       <div class="feature-cover-overlay recipe-feature-cover-overlay">
@@ -928,8 +1557,8 @@
       </div>
     </figure>
     <div class="recipe-feature-title">
-      <h1 class="recipe-feature-recipe-name">Butternut Squash Gratin with&nbsp;Penne</h1>
-        <span class="recipe-feature-chef-name">&mdash; Annabel Karmel &mdash;</span>
+      <h1 class="recipe-feature-recipe-name">Roast Chicken with Sumac, Onions and Pine&nbsp;Nuts</h1>
+        <span class="recipe-feature-chef-name">&mdash; Samuel &amp; Samantha Clark &mdash;</span>
     </div>
 </a></article>
 
@@ -1103,7 +1732,7 @@
       <a href="https://www.penguinrandomhouse.co.uk/terms-of-use/" target="_blank" rel="noopener noreferrer">Terms of Service</a>
     </div>
     <div class="footer__copyright">
-      © 1995-2018 Penguin Books Ltd. Registered number: 861590 England. Registered office: 80 Strand, London, WC2R 0RL UK
+      © 1995-2019 Penguin Books Ltd. Registered number: 861590 England. Registered office: 80 Strand, London, WC2R 0RL UK
     </div>
   </div>
 
@@ -1143,8 +1772,8 @@
         formType = form.getAttribute('data-type');
 
         gaEventSent = true;
-        _gaq.push(['t1._set','hitCallback', function() { submitModalNewsletterForm(form); }]);
-        _gaq.push(['t1._trackEvent', 'The Happy Foodie Newsletter ' + formType + ' popup', 'Submit form']);
+        _gaq.push(['_set','hitCallback', function() { submitModalNewsletterForm(form); }]);
+        _gaq.push(['_trackEvent', 'The Happy Foodie Newsletter ' + formType + ' popup', 'Submit form']);
       }
 
       return false;
@@ -1236,6 +1865,9 @@
       <input type="email" required placeholder="jane.smith@example.org" name="email_1800" value="" maxlength="255" onkeyup="if (this.length>255) this.value=this.value.substr(0, 255)" onblur="this.value=this.value.substr(0, 255)">
       <input type="hidden" class="" name="source_banner_popup_1803" value="popup">
       <input type="submit" class="button" name="submit" id="submit" value="Submit">
+      <div class="newsletter-banner__terms">
+        By clicking SUBMIT, I consent to you using my details to send me The Happy Foodie newsletters and confirm that I have read and understood Penguin Random House's <a href="https://www.penguinrandomhouse.co.uk/PrivacyPolicy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+      </div>
     </form>
 
     <div class="newsletter-banner__thanks hidden">Thanks for signing up!</div>
@@ -1275,6 +1907,9 @@
       <input type="email" required placeholder="jane.smith@example.org" name="email_1800" value="" maxlength="255" onkeyup="if (this.length>255) this.value=this.value.substr(0, 255)" onblur="this.value=this.value.substr(0, 255)">
       <input type="hidden" class="" name="source_banner_popup_1803" value="popup">
       <input type="submit" class="button" name="submit" id="submit" value="Submit">
+      <div class="newsletter-banner__terms">
+        By clicking SUBMIT, I consent to you using my details to send me The Happy Foodie newsletters and confirm that I have read and understood Penguin Random House's <a href="https://www.penguinrandomhouse.co.uk/PrivacyPolicy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+      </div>
     </form>
 
     <div class="newsletter-banner__thanks hidden">Thanks for signing up!</div>
@@ -1314,10 +1949,10 @@
     f.parentNode.insertBefore(p, f);
   }(document));
 </script>
-<script src="https://static.flockler.com/assets/the_happy_foodie/javascripts/application-8c3b89a0f32355c933ec15971720ba2681061746e6b9fe591d487615d7b90b6e.js"></script>
+<script src="https://static.flockler.com/assets/the_happy_foodie/javascripts/application-dc41d099e9d8f50b6d56f20c000aeab3a15175bcca6292e15de42f2464c59b72.js"></script>
 
 <script>
-  window.Analytics.setGoogleAnalyticsCodes( ["UA-15911025-14","UA-42801603-1"] );
+  window.Analytics.setGoogleAnalyticsCodes( ["UA-42801603-1"] );
   window.Analytics.trackPageView();
 
   (function() {
